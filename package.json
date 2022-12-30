@@ -1,0 +1,38 @@
+{
+  "name": "bodales",
+  "version": "1.0.0",
+  "description": "bodales",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js",
+    "dev": "nodemon -r dotenv/config server.js",
+    "db:migrate": "npx sequelize-cli db:migrate"
+  },
+  "keywords": [],
+  "author": "Sapphire",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "nodemailer": "^6.7.7",
+    "nodemon": "^2.0.19",
+    "pg": "^8.7.3",
+    "pg-hstore": "^2.3.4",
+    "sequelize": "^6.21.3",
+    "sequelize-cli": "^6.4.1"
+  },
+  "engines": {
+    "node": "16.14.0"
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sapphirejudith/bodales.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Sapphirejudith/bodales/issues"
+  },
+  "homepage": "https://github.com/Sapphirejudith/bodales#readme"
+}
