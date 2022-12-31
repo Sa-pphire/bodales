@@ -13,7 +13,7 @@ const createRequest = async (req, res) => {
 
     transporter = nodemailer.createTransport({
       host: 'mail.privateemail.com',
-      port: 25,
+      port: 465,
       secure: true,
       auth: {
         user: process.env.USER,
