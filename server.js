@@ -4,10 +4,8 @@ const cors = require("cors");
 const app = express();
 const routes = require("./app/routes");
 
-var corsOption = {
-    origin: "*"
-  };
-app.use(cors(corsOption));
+
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
 app.use('/', routes);
