@@ -48,7 +48,9 @@ const createRequest = async (req, res) => {
           console.log("Email sent successfully!");
         }
       });
-      
+      res.statusCode = 302;
+      res.setHeader('Location', 'https://wa.me/2348152528510?text=Hi,%20i%20am%20${req.body.firstName}%20${req.body.lastName},%20I%20want%20to%20move%20${req.body.productDescription}%20from%20${req.body.location}%20to%20${req.body.destination}.');
+    
     }
     else {
       message = {
@@ -66,7 +68,9 @@ const createRequest = async (req, res) => {
           console.log("Email sent successfully!");
         }
       });
-        }
+      res.statusCode = 302;
+      res.setHeader('Location', 'https://wa.me/2348152528510?text=Hi,%20we%20are%20${req.body.companyName},%20we%20want%20to%20move%20${req.body.productDescription}%20from%20${req.body.location}%20to%20${req.body.destination}.');  
+    }
    return res.end();
   } catch (error){
     return res.status(500).json({
