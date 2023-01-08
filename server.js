@@ -5,7 +5,7 @@ const app = express();
 const routes = require("./app/routes");
 
 var corsOption = {
-    origin: "*"
+    origin: "https://www.bodales.com"
   };
 app.use(cors(corsOption));
 app.use(express.json());

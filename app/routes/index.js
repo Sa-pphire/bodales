@@ -4,6 +4,6 @@ const router = Router();
 
 router.get ('/', (req,res) => res.json({message: "Hi there, Welcome to Bodales"}))
     // Create a new request
-router.post("/request", controllers.createRequest);
+router.post("/request",  cors(corsOptions), controllers.createRequest);
 
 module.exports = router;
