@@ -68,7 +68,6 @@ const createRequest = async (req, res) => {
       });
 
     }
-   return res.end();
   } catch (error){
     return res.status(500).json({
       error: error.message
