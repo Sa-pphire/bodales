@@ -66,8 +66,10 @@ const createRequest = async (req, res) => {
           console.log("Email sent successfully!");
         }
       });
-
     }
+    return res.status(201).json({
+      request,
+    });
   } catch (error){
     return res.status(500).json({
       error: error.message
