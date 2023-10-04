@@ -5,12 +5,12 @@ const app = express();
 const routes = require("./app/routes");
 
 var corsOption = {
-    origin: "https://www.bodales.com"
+    origin: "https://www.bodales.co"
   };
 app.use(cors(corsOption));
 app.use(express.json());
 app.use(express.urlencoded({extended: true}));
-app.use('/', routes);
+app.use('/api', routes);
 
 const db = require("./app/models");
 db.sequelize.sync()
