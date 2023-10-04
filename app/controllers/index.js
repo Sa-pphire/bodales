@@ -9,6 +9,7 @@ const createRequest = async (req, res) => {
     else {
       const request = await db.company.create(req.body);
     }
+    /*
     let message, transporter;
 
     transporter = nodemailer.createTransport({
@@ -66,10 +67,10 @@ const createRequest = async (req, res) => {
           console.log("Email sent successfully!");
         }
       });
-    }
+    } */
     return res.status(201).json({
       request,
-    });
+    })
   } catch (error){
     return res.status(500).json({
       error: error.message
