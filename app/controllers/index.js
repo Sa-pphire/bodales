@@ -6,12 +6,14 @@ const createRequest = async (req, res) => {
     if (req.body.accountType == 'individual'){
       const request = await db.individual.create(req.body);
       return res.status(201).json({
+        "status": 201,
         request
       })
     }
     else {
       const request = await db.company.create(req.body);
       return res.status(201).json({
+        "status": 201
         request
       })
     }
@@ -76,6 +78,7 @@ const createRequest = async (req, res) => {
     } */
   } catch (error){
     return res.status(500).json({
+      "status": 500,
       error: error.message
     })
   }
