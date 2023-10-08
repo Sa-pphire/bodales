@@ -13,8 +13,8 @@ const createRequest = async (req, res) => {
     else {
       const request = await db.company.create(req.body);
       return res.status(201).json({
-        "status": 201
-        request
+        "status": 201,
+         request
       })
     }
     /*
