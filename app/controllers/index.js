@@ -5,9 +5,15 @@ const createRequest = async (req, res) => {
   try{
     if (req.body.accountType == 'individual'){
       const request = await db.individual.create(req.body);
+      return res.status(201).json({
+        request
+      })
     }
     else {
       const request = await db.company.create(req.body);
+      return res.status(201).json({
+        request
+      })
     }
     /*
     let message, transporter;
@@ -68,9 +74,6 @@ const createRequest = async (req, res) => {
         }
       });
     } */
-    return res.status(201).json({
-      request,
-    })
   } catch (error){
     return res.status(500).json({
       error: error.message
